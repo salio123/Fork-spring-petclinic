@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     APP_NAME = "spring-petclinic"
-    DEV_TEAM = 'akshatha.1si20et003@gmail.com'
+    DEV_TEAM = 'sailikhith23@gmail.com'
     BUILD_INFO = "Job_Name: ${env.JOB_NAME}\nBuild_Number: ${env.BUILD_NUMBER}"
   }
   tools {
@@ -24,7 +24,7 @@ pipeline {
   }
   post {
         success {
-            mail to: 'akshatha.1si20et003@gmail.com',
+            mail to: 'sailikhith23@gmail.com',
                 cc: "${env.DEV_TEAM}",
                 subject: "Jenkins Build Success: ${env.JOB_NAME}",
                 body: """
@@ -42,7 +42,7 @@ pipeline {
                         """
         }
         failure {
-            mail to: 'akshatha.1si20et003@gmail.com',
+            mail to: 'sailikhith23@gmail.com',
                 cc: "${env.DEV_TEAM}",
                 subject: "Jenkins Build Failed: ${env.JOB_NAME}",
                 body: """
